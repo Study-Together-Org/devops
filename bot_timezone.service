@@ -1,0 +1,13 @@
+[Unit]
+Description=timezone bot maintained by Zack
+
+[Service]
+User=root
+Type=simple
+WorkingDirectory=/root/2.0
+Environment=STUDY_TOGETHER_MODE=prod
+ExecStart=/root/2.0/venv/bin/python timezone_bot.py > timezone_bot.log 2>&1
+
+[Install]
+WantedBy=multi-user.target
+
